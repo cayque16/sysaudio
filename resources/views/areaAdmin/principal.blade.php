@@ -73,9 +73,9 @@
             </div>
 
             <div class="col-md-3" align="center" id="selecionado">
-              <a href="/locacaos"><img src="https://png.icons8.com/color/96/000000/shop.png"></a>
-              <h4>Editar/Excluir locação</h4>
-              <p>Edite ou exclua as informações<br>de uma locação cadastrada.</p>
+              <a href="/locacaos/marcacoes"><img src="https://png.icons8.com/color/96/000000/shop.png"></a>
+              <h4>Excluir locação</h4>
+              <p>Exclua uma locação cadastrada.</p>
             </div>
           </div>
 

@@ -92,11 +92,18 @@ class LocacaosController extends Controller
   //retorna as marcacoes do usuario logado
   public function marcacoes()
   {
-    $marcacoes = Locacao::orderBy('data','asc')->where([
+    if (Auth::user()->tipo == 0) {
+      $marcacoes = Locacao::orderBy('data','asc')->where([
                           ['idUser','=',Auth::user()->id],
                           ['data','>=',date("y/m/d")],
                           ])->get();
-    return view('locacaos.marcacoes')->with('marcacoes',$marcacoes);
+      return view('locacaos.marcacoes')->with('marcacoes',$marcacoes);
+     }
+     if (Auth::user()->id == 1){
+      $marcacoes = Locacao::orderBy('data','asc')->where('data','>=',date("y/m/d"))->get();
+      return view('locacaos.marcacoes')->with('marcacoes',$marcacoes);
+    }
+
   }
 
 }
